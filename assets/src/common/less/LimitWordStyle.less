@@ -1,0 +1,164 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+.hide{
+  display: none;
+}
+/*=== 发布大标题字符限制区域样式 ==*/
+.watermark {
+  position: absolute;
+  top: 0px;
+  left: 60px;
+  font-size: 24px;
+  color: #999;
+}
+
+.voc-style {
+  margin-left: 60px;
+  width: 90%;
+  background: none;
+  border: none;
+  font-size: 24px;
+ /* line-height: 24px;*/
+  color: #000;
+  outline: none;
+  font-family: @baseFont;
+ /* vertical-align: -3px;*/
+}
+
+.num-style {
+  color: #999;
+  //float: right;
+ /* margin-left: 42px;*/
+  margin-top: -3px;
+  font-family:@baseFont;
+  font-size: 14px;
+  b {
+    font-weight: normal;
+    font-family:@baseFont;
+    font-size: 14px;
+    &.entered {
+      color: #FF4400;
+    }
+  }
+}
+//书本简介
+.numStyle{
+  position: absolute;
+  right: 40px;
+  bottom: -25px;
+  vertical-align: middle;
+  b{
+    color: #DD4843;
+    font-weight: normal;
+    vertical-align: middle;
+  }
+}
+.introHolder{
+  position: absolute;
+  left: 36px;
+  top: 15px;
+  color: #666;
+}
+/*== 发布时光小标题字符限制区域样式 ==*/
+.pt-sub-watermark {
+  position: absolute;
+  top: 19px;
+  left: 40px;
+  font-size: 18px;
+  color: #999;
+}
+
+.pt-sub-title {
+  margin: 12px 40px;
+  padding: 5px 0px;
+  height: 26px;
+  width: 82%;
+  background: #fff;
+  border: none;
+  line-height: 26px;
+  font-size: 18px;
+  color: #333;
+  outline: none;
+}
+.pt-sub-number{
+  color: #999;
+  float: right;
+  margin-top: 25px;
+  margin-right: 40px;
+  font-family:@baseFont;
+  font-size: 14px;
+  b {
+    font-weight: normal;
+    font-family:@baseFont;
+    font-size: 14px;
+    &.entered {
+      color: #FF4400;
+    }
+  }
+}
+
+/*=== 意见反馈 标题字符限制区域样式 ==*/
+.feedback-watermark{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #b2b2b2;
+}
+.feedback-title{
+  width: 100%;
+  padding: 6px 12px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.feedback-num {
+  color: #999;
+  float: left;
+  margin-top: 2px;
+  font-family:@baseFont;
+  font-size: 14px;
+  b {
+    font-weight: normal;
+    font-family:@baseFont;
+    font-size: 14px;
+    &.entered {
+      color: #FF4400;
+    }
+  }
+}
+
+/*== 发布时光图片描述字符限制区域样式 ==*/
+.pi-img-desc {
+  margin: 0px;
+  padding: 0px 48px 0px 4px;
+  display: block;
+  vertical-align: middle;
+  width: 114px;
+  height: 38px;
+  line-height: 30px;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  border: 1px dashed #ccc;
+  border-radius: 0px 0px 2px 2px;
+  text-align: left;
+  cursor: default;
+}
+.pi-txt-mark {
+  position: absolute;
+  top: 12px;
+  left: 7px;
+  font-size: 14px;
+  color: #999;
+}
+.pi-img-num {
+  position: absolute;
+  top: 12px;
+  right: 6px;
+  color: #b5b5b5;
+  font-family: @baseFont;
+  font-size: 12px;
+  b {
+    color: #FF4400;
+  }
+}

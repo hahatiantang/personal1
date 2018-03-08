@@ -1,0 +1,153 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+.temple_box{
+  height: 360px;
+  .temple_list{
+    height: 300px;
+    clear: both;
+    overflow-y: auto;
+    overflow-x: hidden;;
+    margin-top: 20px;
+    margin-left: 10px;
+    &:after{
+      display: table;
+      content: '';
+      clear: both;
+    }
+    ul{
+      &:after{
+        display: table;
+        content: '';
+        clear: both;
+      }
+      li{
+        margin: 10px 15px 5px;
+        float: left;
+        /*width: 142px;
+        height: 142px;*/
+        box-shadow: 0 0 1px 1px #bcbcbc;
+        cursor: pointer;
+        position: relative;
+        border: 2px solid #fff;
+        &.over{
+          border: 2px solid #9bbb1a;
+          position: relative;
+          &:after{
+            content: '';
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: url("../image/selectImgBg.png") no-repeat;
+            right: 0;
+            bottom: 0;
+          }
+        }
+        /*img{
+          width: 142px;
+          height: 142px;
+        }*/
+      }
+    }
+    .temple_line{
+      margin: 10px 15px 5px;
+      float: left;
+      position: relative;
+      .temple_img{
+        box-shadow: 0 0 1px 1px #bcbcbc;
+        cursor: pointer;
+        position: relative;
+        border: 2px solid #fff;
+        &.over{
+          border: 2px solid #9bbb1a;
+          position: relative;
+          &:after{
+            content: '';
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            background: url("../image/selectImgBg.png") no-repeat;
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+      .stylePendant{
+        position: absolute;
+        bottom: 20px;
+        left: -15px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid #ccc;
+        z-index: 2;
+        background: #fff;
+        cursor: pointer;
+        img{
+          height: 50px;
+          width: 50px;
+        }
+      }
+      .temple_font{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+      }
+    }
+    .temple_tip{
+      text-align: left;
+      font-size: 14px;
+      color:#666;
+      width: 700px;
+      display: inline-block;
+      margin-top: 20px;
+      padding-left: 15px;
+    }
+  }
+  .temp_footer{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    clear: both;
+    /*span{
+      color: #666;
+      font-size: 12px;
+      margin-top: 17px;
+      float: left;
+      padding-left: 20px;
+    }*/
+    .btn{
+      width: 120px;
+      height: 38px;
+      font-size: 16px;
+      padding: 0;
+      border-radius: 2px;
+      border: 1px solid @baseColor;
+      margin-right: 10px;
+      color: #fff;
+      background: @baseColor;
+      cursor: pointer;
+      outline: none;
+      font-family: @baseFont;
+      &:hover{
+        background: @baseColorHover;
+      }
+      &.cleBtn{
+        color: #a2a2a2;
+        padding: 0;
+        border-radius: 2px;
+        background: @baseCloseColor;
+        margin-right: 40px;
+        border: 1px solid #d9d9d9;
+        &:hover{
+          background: @baseCloseHover;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+
+body{
+  font-family: @baseFont;
+}
+.tf-calendar-header{
+  width: 100%;
+  background: #0391e4;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  z-index: 1040;
+  .calendar-navbar{
+    padding: 0 15px 0 24px;
+    clear: both;
+    min-height: 40px;
+    font-size: 14px;
+    .tf-calendar-logo{
+      display: inline-block;
+      float: left;
+      margin:9px 15px 0 0;
+      img{
+        display:block;
+      }
+    }
+    .right-calendar-menu{
+      display: inline-block;
+      float: left;
+    }
+    .left-menu,.right-calendar-menu{
+      li{
+        display: inline-block;
+        float: left;
+        a{
+          color: #fff;
+          text-decoration: none;
+          display: block;
+          padding: 0px 15px 0;
+          line-height: 40px;
+          &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+      .calendar-caret {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid;
+        display: inline-block;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        width: 0;
+        color: #fff;
+      }
+    }
+    .right-calendar-menu{
+      float: right;
+      .calendar-avator-box{
+        cursor: default;
+      }
+      .calendar-avator{
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        margin: 0 5px 0 0;
+        img{
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+        }
+      }
+      .calendar-nickname {
+        max-width:80px;
+        min-width:50px ;
+      }
+
+      .calendar-dropdown-menu{
+        width: 155px;
+        a{
+          padding-left: 23px;
+        }
+      }
+      .calendar-dropdown-toggle.calendar-news-box{
+        .calendar-dropdown-menu{
+          width: 100px;
+          a{
+            padding-left: 15px;
+            position:relative;
+          }
+        }
+      }
+      .calendar-news{
+        cursor: default;
+      }
+      .calendar-news-box .calendar-news,.carts a{
+        background: url("../images/header/btn_email.png") no-repeat center;
+        height: 41px;
+        width:24px;
+        position:relative;
+        &:hover{
+          background:#016fae url("../images/header/btn_email.png") no-repeat center;
+        }
+        .calendar-amount{
+          background-color: #db413d;
+          border-radius: 8px;
+          color: #ffffff;
+          font-size: 12px;
+          left: 36px;
+          padding: 3px 4px 2px;
+          position: absolute;
+          top: 5px;
+          line-height: 1;
+          z-index: 2;
+          min-width: 10px;
+          text-align: center;
+          font-family: @baseFont;
+        }
+      }
+      .calendar_cover_menu{
+        a{
+          display: inline-block;
+        }
+      }
+    }
+    /*编辑书壳制作书样式*/
+    .calendar-makeBox{
+      color: #fff;
+      display: inline-block;
+      padding-top: 10px;
+      .calendar-line{
+        padding-right: 15px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .calendar-dropdown-toggle{
+    position: relative;
+    .calendar-dropdown-menu{
+      position: absolute;
+      left: 0;
+      top: 40px;
+      background: #016fae;
+      width: 110px;
+      display: none;
+      li{
+        margin: 0;
+        width: 100%;
+        a{
+          line-height: 32px;
+          padding: 0 15px;
+          display: block;
+          &:hover{
+            text-decoration: none;
+            background: #025c90;
+          }
+        }
+      }
+    }
+    &:hover{
+      background: #016fae;
+      .calendar-dropdown-menu{
+        display: block;
+      }
+    }
+  }
+  /*显示不下隐藏*/
+  .ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .calendar-menu-tips {
+    position: absolute;
+    right: 5px;
+    top: 8px;
+    background-color: #db413d;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 2px 4px;
+    line-height: 1;
+    z-index: 2;
+    min-width: 10px;
+    text-align: center;
+    font-family: @baseFont;
+  }
+}

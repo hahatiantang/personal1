@@ -1,0 +1,179 @@
+
+
+/*
+清除浮动
+*/
+.cf() {
+  &:after {
+    content: "\200B";
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+  }
+}
+
+/*
+圆角
+@size: 大小
+*/
+.bdrs (@size:5px){
+  -webkit-border-radius:@size;
+  -moz-border-radius:@size;
+  border-radius: @size;
+}
+
+/*
+圆角
+@lt: 左上
+@rt: 右上
+@rb: 右下
+@lb: 左下
+*/
+.bdrsAll (@lt:4px,@rt:4px,@rb:4px,@lb:4px){
+  -webkit-border-radius:@arguments;
+  -moz-border-radius:@arguments;
+  border-radius:@arguments;
+}
+
+/*
+连续英文字换行
+*/
+.wrap () {
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  //  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+/*
+禁止选择文字
+*/
+.noSelect() {
+  -webkit-user-select: none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select: none;
+}
+
+
+/*
+文字溢出省略
+*/
+
+.ellipsis () {
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+/**************************************************************************/
+@colorDefault: #333;
+@colorGrey: #777;
+@colorLinkHover: #069bf2;
+
+
+.tfInput {
+  .bdrs(4px);
+  height: 22px;
+  padding: 6px 12px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.tfBtn {
+  .bdrs(4px);
+  height: 22px;
+  padding: 6px 12px;
+  background: #7cb42b;
+  border: 1px solid #7cb42b;
+  color: #fff;
+  &[disabled] {
+
+    background: #ccc;
+    border: 1px solid #ccc;
+  }
+}
+
+/* 表单验证出错样式
+*/
+.tfErrorText {
+  height:20px;
+  line-height:20px;
+  padding-bottom:5px;
+  span {
+    color: #900;
+  }
+}
+
+
+//时光书遮罩效果，里面不允许添加私有的样式，必须在自己私有的样式里添加
+/*所有时光书翻书过渡效果*/
+.bookTransition() {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/*所有页面翻书效果*/
+.bookTransform() {
+  -webkit-transform: rotateY(-28deg);
+  -moz-transform: rotateY(-28deg);
+  -ms-transform: rotateY(-28deg);
+  -o-transform: rotateY(-28deg);
+  transform: rotateY(-28deg);
+  -webkit-transform-origin: 0px;
+  -moz-transform-origin: 0px;
+  -ms-transform-origin: 0px;
+  -o-transform-origin: 0px;
+  transform-origin: 0px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.timeBookBg(@width, @height) {
+  display: inline-block;
+  width: @width;
+  height: @height;
+  background: #868686;
+  position: relative;
+  border-radius: 6px;
+  z-index: 1;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  margin-right: 10px;
+  img {
+    border-radius: 6px;
+    .bookTransition();
+  }
+  .mask {
+    position: absolute;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+    background: url("../images/userbook-bg.png") repeat-y;
+    .bookTransition()
+  }
+  &:hover {
+    img, .mask {
+      .bookTransform();
+    }
+  }
+}
+
+.tfIconUser() {
+  background: #fff url("../images/loginForm/ico-user.png") no-repeat 10px center;
+}
+
+
+.tfIconPassword() {
+  background: #fff url("../images/loginForm/ico-lock.png") no-repeat 12px center;
+}
+
+

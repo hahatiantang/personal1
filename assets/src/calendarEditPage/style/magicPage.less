@@ -1,0 +1,256 @@
+.magicPage{
+  padding-top: 40px;
+  box-sizing: border-box;
+  .magicPageHeadBox{
+    height: 40px;
+    width: 1150px;
+    margin: 40px auto 0;
+    position: relative;
+    &:after{
+      display: table;
+      content: '';
+      clear: both;
+    }
+    .head_label{
+      float: left;
+      width: 368px;
+      color: #666;
+      background: #fff;
+      font-size: 16px;
+      line-height: 40px;
+      padding-left: 125px;
+      box-sizing: border-box;
+      margin-left: 10px;
+      position: relative;
+      &:before{
+        position: absolute;
+        display: inline-block;
+        border-top: 20px solid transparent;
+        border-left: 20px solid #e3e3e3;
+        border-bottom: 20px solid transparent;
+        left: 378px;
+        top: 0;
+        content: '';
+        z-index: 1;
+      }
+      &:first-child{
+        margin-left: 0;
+      }
+      .head_label_num{
+        width: 50px;
+        height: 50px;
+        color: #999;
+        font-size: 18px;
+        text-align: center;
+        background: #fff;
+        border-radius: 50%;
+        line-height: 50px;
+        display: inline-block;
+        box-shadow: 1px 0 8px 0  rgba(0,0,0,.1);
+        position: absolute;
+        top:-5px;
+        left: 60px;
+      }
+    }
+    .headerAfter{
+      &:after{
+        position: absolute;
+        display: inline-block;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #fff;
+        left: 368px;
+        top: 0;
+        content: '';
+        z-index: 2;
+      }
+    }
+    .headerActive{
+      &:after{
+        position: absolute;
+        display: inline-block;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        border-left: 20px solid #3d93f6;
+        left: 368px;
+        top: 0;
+        content: '';
+        z-index: 2;
+      }
+    }
+    .headerChange{
+      background: #3d93f6;
+      color: #fff;
+      .head_label_num {
+        color: #3d93f6;
+      }
+    }
+    .magicPageTip{
+      position: absolute;
+      width: 29px;
+      height: 26px;
+      top: 72px;
+      right: 27px;
+      cursor: pointer;
+      background: url("../image/magicLight.png") no-repeat;
+      &:hover{
+        .magicPageTipBox{
+          display: block;
+        }
+      }
+      .magicPageTipBox{
+        padding: 14px 10px 14px;
+        background: #fcfae8;
+        position: absolute;
+        top: -30px;
+        left:44px;
+        width: 184px;
+        display: none;
+        text-align: left;
+        font-size: 14px;
+        color: #333;
+        line-height: 24px;
+        padding-left: 27px;
+        border: 1px solid #e1cda6;
+        -moz-box-shadow: 0 0 1px 1px #e1cda6;
+        -webkit-box-shadow: 0 0 1px 1px #e1cda6;
+        box-shadow: 0 0 1px 1px #e1cda6;
+        &:before{
+          content: "";
+          position: absolute;
+          top: 28px;
+          left: -11px;
+          border-top:12px solid transparent;
+          border-bottom:11px solid transparent;
+          border-right:11px solid #e1cda6;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 30px;
+          left: -10px;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right: 10px solid #fcfae8;
+        }
+      }
+    }
+  }
+
+  .magicPageBodyBox{
+    margin-top: 40px;
+    .magicNoVideoBox{
+      .magicNoBox{
+        width: 616px;
+        margin: 0 auto;
+        overflow: hidden;
+        .magicHasBox{
+          width: 616px;
+          height: 348px;
+          position: relative;
+          .videoStart{
+            background: url("../image/videoStart.png") center no-repeat;
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            margin: -40px 0 0 -40px;
+            z-index: 20;
+            cursor: pointer;
+          }
+        }
+        .magicImgNo{
+          background: url("../image/video_mask.png") center no-repeat;
+          width: 200px;
+          height: 189px;
+          background-size: 100% 100%;
+          margin: 34px auto 0;
+        }
+        .magicFontBig{
+          color: #333;
+          font-size: 18px;
+          text-align: center;
+          margin-top: 27px;
+          .magicFontTip{
+            color: #039ae3;
+          }
+        }
+        .magicFontSmile{
+          font-size: 14px;
+          color: #666;
+          margin-top: 12px;
+          text-align: center;
+          .magicFontSmileA{
+            padding-left: 10px;
+            color: #666;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+              color: #039ae3;
+            }
+          }
+        }
+        .videoUpBox{
+          width: 169px;
+          height: 46px;
+          margin: 28px auto 0;
+          .videoUpBtn{
+            background: #039ae3;
+            cursor: pointer;
+            width: 169px;
+            height: 46px;
+            color: #fff;
+            text-align: center;
+            line-height: 46px;
+            border-radius: 5px;
+            font-size: 18px;
+            .videoUpBtnSpan{
+              display: inline-block;
+              font-size: 36px;
+              font-weight: 900;
+              margin-right: 8px;
+              vertical-align: sub;
+            }
+            .videoUpBtnPan{
+              vertical-align: top;
+            }
+            &:hover{
+              background: #0283c1;
+            }
+          }
+        }
+        .videoUpFont{
+          font-size: 14px;
+          color: #333;
+          width: 400px;
+          margin: 40px auto 0;
+          .videoUpFontP{
+            margin-bottom: 20px;
+            background: url("../image/videoFontImg.png") left center no-repeat;
+            background-size: 16px 16px;
+            padding-left: 23px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .videoPageUpFont{
+      font-size: 14px;
+      color: #333;
+      width: 400px;
+      margin: 40px 0 0 0;
+      .videoPageUpFontP{
+        margin-bottom: 20px;
+        background: url("../image/videoFontImg.png") left center no-repeat;
+        background-size: 16px 16px;
+        padding-left: 23px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

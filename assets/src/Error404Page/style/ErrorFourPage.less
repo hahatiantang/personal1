@@ -1,0 +1,42 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+body{
+  font-family: @baseFont;
+}
+ .error404Box{
+  background: url("../images/404bg.png") no-repeat top center;
+  width: 1000px;
+  height: 428px;
+  margin: 50px auto 0;
+  .text404{
+    width: 400px;
+    padding: 80px 0 0 280px;
+    margin: 0 auto;
+    .text{
+      font-size: 35px;
+      color: #2e2e2e;
+      display:block;
+      margin: 0 0 20px;
+    }
+  }
+  .error-words-404{
+    text-align: left;
+    font-size: 16px;
+    color: #2e2e2e;
+    &:first-child{
+      padding-bottom: 15px;
+    }
+    .btnReturn{
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+      border-radius: 3px;
+      background-color: #069BF2;
+      color: #ffffff;
+      text-align: center;
+      line-height: 40px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  }
+
+}

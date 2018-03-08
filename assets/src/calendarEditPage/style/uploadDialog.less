@@ -1,0 +1,55 @@
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+.uploadDialog{
+  width: 100%;
+  height: 100%;
+  color:#595959;
+  font-size: 16px;
+  .uploadDialogBtn{
+    width: 152px;
+    color: #fff;
+    background: @baseColor;
+    height: 48px ;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    border-radius: 3px;
+    &:hover{
+      background: @baseColorHover;
+    }
+    margin: 40px auto 20px;
+    .uploadPicMore{
+      line-height: 48px;
+      .uploadDialogBtnImg{
+        width: 34px;
+        height: 26px;
+        vertical-align: middle;
+        padding-right: 10px;
+      }
+    }
+  }
+  .uploadDialogPTip{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #e8413e;
+  }
+  .uploadDialogP{
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    .uploadDialogNum{
+      color: #DD4843;
+    }
+  }
+  .uploadDialogP1{
+    font-size: 16px;
+    text-align: center;
+    line-height: 26px;
+    padding-bottom: 24px;
+  }
+}

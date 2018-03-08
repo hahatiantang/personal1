@@ -1,0 +1,85 @@
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+.errUploadDialog{
+  width: 100%;
+  height: 110px;
+  color:#595959;
+  font-size: 16px;
+  padding-bottom: 20px;
+  .errUploadDialogBtn{
+    width: 120px;
+    color: #fff;
+    background: @baseColor;
+    height: 36px ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    border-radius: 3px;
+    margin: 30px auto;
+    &:hover{
+      background: @baseColorHover;
+    }
+    .errUploadPicMore{
+      line-height: 36px;
+    }
+  }
+  .errUploadDialogP{
+    margin-top: 40px;
+    text-align: center;
+    line-height: 20px;
+    .errUploadDialogNum{
+      color: #DD4843;
+    }
+  }
+  .blurImgP{
+    margin-top: 25px;
+    text-align: center;
+    line-height: 24px;
+    .blurImgPNum{
+      color: #DD4843;
+    }
+  }
+  .blurImgDialogBtn{
+    width: 260px;
+    height: 36px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    border-radius: 3px;
+    margin: 20px auto 0;
+    .blurImgDialogBtnLeft{
+      color: #fff;
+      background: @baseColor;
+      border: 1px solid @baseColor;
+      width: 120px;
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      border-radius: 5px;
+      &:hover{
+        background: @baseColorHover;
+        border: 1px solid @baseColorHover;
+      }
+    }
+    .blurImgDialogBtnRight{
+      color: #666;
+      border: 1px solid #ddd;
+      width: 120px;
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      margin-left: 16px;
+      background: @baseCloseColor;
+      border-radius: 5px;
+      &:hover{
+        background: @baseCloseHover;
+      }
+    }
+  }
+}

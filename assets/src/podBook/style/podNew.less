@@ -1,0 +1,47 @@
+
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+.podNewBox{
+  width: 484px;
+  margin: 30px auto 0;
+  font-size: 18px;
+  img{
+    width: 117px;
+    height: 168px;
+    vertical-align: middle;
+  }
+}
+.podNewBtnBox{
+  width: 262px;
+  margin: 30px auto 0;
+  height: 36px;
+  font-size: 16px;
+  padding-bottom: 20px;
+  .podNewBtnLeft{
+    background: @baseColor;
+    width: 120px;
+    line-height: 36px;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover{
+      background: @baseColorHover;
+    }
+  }
+  .podNewBtnRight{
+    background: @baseCloseColor;
+    width: 118px;
+    line-height: 34px;
+    color: #a1a1a1;
+    display: inline-block;
+    margin-left: 20px;
+    border: 1px solid #d9d9d9;
+    cursor: pointer;
+    &:hover{
+      background: @baseCloseHover;
+    }
+  }
+}

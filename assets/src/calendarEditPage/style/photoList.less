@@ -1,0 +1,117 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+.photo_box{
+  height: 360px;
+  .photo_title{
+    margin: 15px 0 0 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #666;
+  }
+  .photo_list{
+    height: 300px;
+    clear: both;
+    overflow-y: auto;
+    margin-top: 5px;
+    margin-left: 10px;
+    ul{
+      li{
+        margin: 10px 10px 5px;
+        float: left;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        div{
+          box-shadow: 0 0 1px 1px #bcbcbc;
+          border: 2px solid #fff;
+          img{
+            display: inline-block;
+          }
+          &.over{
+            border: 2px solid #9bbb1a;
+            position: relative;
+            &:after{
+              content: '';
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              background: url("../image/selectImgBg.png") no-repeat;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+        p{
+          font-size: 14px;
+          margin-top: 6px;
+          color: #666;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .photo_footer{
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    clear: both;
+    .photo_photo{
+      display: inline-block;
+      width: 120px;
+      height: 38px;
+      padding: 0;
+      border-radius: 2px;
+      border: 1px solid @baseColor;
+      margin-right: 10px;
+      color: #fff;
+      background: @baseColor;
+      cursor: pointer;
+      outline: none;
+      font-family: @baseFont;
+      text-align: center;
+      line-height: 38px;
+      font-size: 14px;
+      &:hover{
+        background: @baseColorHover;
+      }
+    }
+    .btn{
+      width: 120px;
+      height: 38px;
+      padding: 0;
+      border-radius: 2px;
+      border: 1px solid @baseColor;
+      margin-right: 10px;
+      color: #fff;
+      background: @baseColor;
+      cursor: pointer;
+      outline: none;
+      font-family: @baseFont;
+      &:hover{
+        background: @baseColorHover;
+      }
+      &[disabled] {
+        background: @baseCloseHover;
+        opacity: 1;
+        color: #a2a2a2;
+        border: 1px solid #d9d9d9;
+      }
+      &.cleBtn{
+        color: #a2a2a2;
+        padding: 0;
+        border-radius: 2px;
+        background: @baseCloseColor;
+        margin-right: 40px;
+        border: 1px solid #d9d9d9;
+        &:hover{
+          background: @baseCloseHover;
+        }
+      }
+    }
+  }
+}

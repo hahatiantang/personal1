@@ -1,0 +1,227 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseTitle:#0391e4;
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+
+.sureBtnStyle{
+  outline: none;
+  padding: 0;
+  border-radius: 2px;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-transform: none;
+  overflow: visible;
+  color: #fff ;
+  background: @baseColor;
+  width: 100px ;
+  height: 35px ;
+  font-size: 16px;
+  margin: 15px;
+  border:none;
+  font-family: @baseFont;
+}
+
+.cancelBtnStyle{
+  border-radius: 2px;
+  padding: 0;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  overflow: visible;
+  color: #a1a1a1 ;
+  background: @baseCloseColor;
+  width: 100px ;
+  height: 35px ;
+  font-size: 16px;
+  margin: 15px;
+  border:1px solid #d9d9d9;
+  font-family: @baseFont;
+  outline:none;
+}
+
+
+
+.tf-dialog-box {
+  .okBtn {
+    color: #fff !important;
+    background: @baseColor !important;
+    width: 100px !important;
+    height: 35px !important;
+    font-size: 16px !important;
+    margin: 15px!important;
+    font-family: @baseFont !important;
+    &:hover{
+      background: @baseColorHover !important;
+    }
+  }
+  .cancelBtn {
+    color: #a1a1a1 !important;
+    background: @baseCloseColor !important;
+    width: 100px !important;
+    height: 35px !important;
+    font-size: 16px !important;
+    margin: 15px!important;
+    font-family: @baseFont !important;
+    &:hover{
+      background: @baseCloseHover !important;
+    }
+  }
+}
+
+.tf-dialog-alert {
+  text-align: center;
+
+  > div {
+    > div {
+      display: inline-block;
+    }
+  }
+  a {
+    color: @baseColor;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .dialog_box_body{
+    border-radius: 0 0 8px 8px ;
+  }
+
+  &-footer {
+    padding: 5px 0 0 0;
+    text-align: center;
+
+    > button {
+      &:extend(.cancelBtnStyle);
+      &:hover {
+        background: @baseCloseHover;
+      }
+      margin-left: 25px;
+      &:first-child {
+        &:extend(.sureBtnStyle);
+        margin-left: 0;
+        &:hover {
+          background: @baseColorHover;
+        }
+      }
+    }
+  }
+}
+
+.dialog_box {
+  > div {
+    border-radius: 8px!important;
+    > div{
+      text-align: center!important;
+    }
+  }
+
+  &_header {
+    padding: 10px 15px;
+    background-color: @baseTitle;
+    border-radius: 8px 8px 0 0;
+    border-bottom: none;
+    color: #fff;
+    font-family: @baseFont;
+    &_title {
+      margin: 0;
+      color: #FFF;
+      font-size: 16px;
+      text-align: left;
+      font-weight: normal;
+      line-height: 1.42857143;
+      font-family: @baseFont;
+    }
+    &_close {
+      border: 0 none;
+      margin-top: -26px;
+      opacity: 1;
+      color: #a1a1a1;
+      background: url("../images/alertMsg/close_btn_icon.png") no-repeat center;
+      width: 32px;
+      height: 32px;
+      transition: all 0.5s;
+      float: right;
+      cursor: pointer;
+      font-size: 21px;
+      font-weight: bold;
+      line-height: 1;
+      outline: none;
+      text-shadow: 0 1px 0 #fff;
+      &:hover {
+        -webkit-transform: rotateZ(180deg);
+        -moz-transform: rotateZ(180deg);
+        -ms-transform: rotateZ(180deg);
+        -o-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  &_body {
+    //padding: 42px 40px 30px;
+    position: relative;
+    font-family: @baseFont;
+    -webkit-font-smoothing: antialiased;
+    background: #fff;
+    &.noTitle{
+      border-radius: 5px;
+    }
+
+    &_concls {
+      font-size: 16px;
+      margin: 0 0 10px;
+
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .box {
+
+    /*.content {
+      border-radius: 8px 8px 0 0;
+      border: none;
+      -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+      background-clip: padding-box;
+      position: relative;
+
+    }*/
+    .footer {
+      border-top: none;
+      text-align: center;
+      padding: 0 15px 30px;
+      background: #fff;
+
+      .btnOk {
+        &:extend(.sureBtnStyle);
+        &:hover {
+          background: @baseColorHover;
+        }
+      }
+      .btnNo {
+        &:extend(.cancelBtnStyle);
+        &:hover {
+          background: @baseCloseHover;
+        }
+      }
+    }
+
+  }
+
+}

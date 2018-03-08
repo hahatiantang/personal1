@@ -1,0 +1,38 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+body{
+  font-family: @baseFont;
+}
+.errorBox{
+  text-align: center;
+  margin-top: 60px;
+  width: 100%;
+  .errorCenter{
+    display: inline-block;
+    padding-top: 10%;
+    .error{
+      display: inline-block;
+      padding-left: 20px;
+      vertical-align: middle;
+      padding-top: 20px;
+      p{
+        text-align: left;
+        &:first-child{
+          padding-bottom: 15px;
+        }
+        .btnReturn{
+          display: inline-block;
+          width: 120px;
+          height: 40px;
+          border-radius: 3px;
+          background-color: #069BF2;
+          color: #ffffff;
+          text-align: center;
+          line-height: 40px;
+          font-size: 16px;
+          margin-left: 10px;
+        }
+      }
+
+    }
+  }
+}

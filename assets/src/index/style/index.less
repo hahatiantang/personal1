@@ -1,0 +1,505 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseTitle:#0391e4;
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+
+body{
+  font-family: @baseFont;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.calendarPage{
+
+  .calendarBtnCommon{
+    width: 128px;
+    height: 34px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 34px;
+    color: @baseColor;
+    text-align: center;
+    border: 1px solid @baseColor;
+    background: transparent;
+    &:hover{
+      background: @baseColor;
+      color: #fff;
+    }
+  }
+
+  .calendarHead{
+    width: 100%;
+    background: #c3c3c3;
+    height: 160px;
+    .calendarHeadBox{
+      width: 545px;
+      height: 76px;
+      margin: 0 auto;
+      padding-top: 40px;
+      &:after{
+        display: table;
+        clear: both;
+        content: '';
+      }
+      .calendarHeadBoxS{
+        width: 179px;
+        display: block;
+        float: left;
+        cursor: pointer;
+        text-decoration: none;
+        .calendarHeadBoxSP{
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #212121;
+          line-height: 30px;
+        }
+      }
+      .calendarHeadBoxH{
+        width: 141px;
+        display: block;
+        float: left;
+        cursor: pointer;
+        margin: 0 20px;
+        text-decoration: none;
+        .calendarHeadBoxHP{
+          text-align: center;
+          font-size: 18px;
+          font-weight: bold;
+          color: #212121;
+          line-height: 30px;
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+
+  .calendarStart{
+    width: 100%;
+    .calendarStartBox{
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      .calendarStartImg{
+        width: 100%;
+      }
+      .calendarStartBox1{
+        position: absolute;
+        top:0;
+        left: 50%;
+        margin-left: -500px;
+        width: 1000px;
+        .calendarStartInBox{
+          width: 340px;
+          margin: 0 auto;
+          float: right;
+          img{
+            width: 340px;
+            height: 134px;
+            margin-top: 80px;
+          }
+          .calendarStartP{
+            letter-spacing: 10px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 18px;
+            color: #212121;
+            margin-top: 10px;
+          }
+          .calendarStartIntro{
+            width: 350px;
+            height: 96px;
+            line-height: 30px;
+            font-size: 18px;
+            text-align: center;
+            color: #1c1c1c;
+            margin-top: 35px;
+          }
+          .calendarStartBtn{
+            margin: 20px auto 0;
+            .calendarBtnCommon();
+          }
+        }
+      }
+    }
+  }
+
+  .calendarType{
+    width: 100%;
+    padding-top: 70px;
+    .calendarTypeTitle{
+      line-height: 36px;
+      font-size: 36px;
+      color: #2c2c2c;
+      text-align: center;
+    }
+    .calendarTypeIntroBox{
+      width: 1000px;
+      height: 720px;
+      margin: 60px auto 0;
+      position: relative;
+      &:after{
+        display: table;
+        clear: both;
+        content: '';
+      }
+      .calendarTypeHb{
+        float: left;
+        width: 281px;
+        margin: 0 auto;
+        .calendarTypeHbBox{
+          width: 300px;
+          margin: 0 auto;
+          .calendarTypeHbT{
+            text-align: center;
+            font-size: 32px;
+            color: #212121;
+            margin-bottom:20px;
+          }
+          .calendarTypeHbI{
+            text-align: center;
+            font-size: 18px;
+            line-height: 36px;
+          }
+          .calendarTypeHbPrice{
+            color: #de0025;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+          }
+          .calendarTypeLeftBtn{
+            .calendarBtnCommon();
+            text-decoration: none;
+            display: block;
+            margin: 20px auto 0;
+          }
+        }
+        .calendarTypeHbImg{
+          background: url("../image/calendar-type-hb.jpg") no-repeat;
+          width: 281px;
+          height: 240px;
+          margin-top: 120px;
+        }
+      }
+      .calendarTypeSb{
+        float: left;
+        width: 270px;
+        margin: 0 auto;
+        padding-left: 60px;
+        .calendarTypeSbBox{
+          width: 270px;
+          margin: 0 auto;
+          .calendarTypeSbT{
+            text-align: center;
+            font-size: 32px;
+            color: #212121;
+            margin-bottom:20px;
+          }
+          .calendarTypeSbI{
+            text-align: center;
+            font-size: 18px;
+            line-height: 36px;
+          }
+          .calendarTypeSbPrice{
+            color: #de0025;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+          }
+          .calendarTypeRightBtn{
+            .calendarBtnCommon();
+            text-decoration: none;
+            display: block;
+            margin: 20px auto 0;
+          }
+        }
+        .calendarTypeSbImg{
+          background: url("../image/calendar-type-sb.jpg") no-repeat;
+          width: 270px;
+          height: 296px;
+          margin-top: 80px;
+        }
+      }
+      .calendarTypeDiy{
+        float: left;
+        width: 281px;
+        margin: 0 auto;
+        padding-left: 60px;
+        .calendarTypeDiyBox{
+          width: 300px;
+          margin: 0 auto;
+          .calendarTypeDiyT{
+            text-align: center;
+            font-size: 32px;
+            color: #212121;
+            margin-bottom:20px;
+          }
+          .calendarTypeDiyI{
+            text-align: center;
+            font-size: 18px;
+            line-height: 36px;
+          }
+          .calendarTypeDiyPrice{
+            color: #de0025;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+          }
+          .calendarTypeDiyBtn{
+            .calendarBtnCommon();
+            text-decoration: none;
+            display: block;
+            margin: 20px auto 0;
+          }
+        }
+        .calendarTypeDiyImg{
+          background: url("../image/calendar-type-diy.jpg") no-repeat;
+          width: 281px;
+          height: 240px;
+          margin-top: 120px;
+        }
+      }
+    }
+  }
+
+  .calendarStyle{
+    background: #f2f2f2;
+    padding-top: 70px;
+    .calendarStyleTitle{
+      line-height: 36px;
+      font-size: 36px;
+      color: #2c2c2c;
+      text-align: center;
+    }
+    .styleImage{
+      width: 100%;
+      position: relative;
+      margin: 60px auto 0;
+      .calendarStyleImg{
+        width: 100%;
+      }
+      .styleImageIntro1{
+        width: 356px;
+        text-align: center;
+        position: absolute;
+        top:10%;
+        left: 20%;
+        .styleImage1P{
+          font-size: 24px;
+          color: #212121;
+          line-height: 36px;
+        }
+        .styleImage1p1{
+          font-size: 18px;
+          color: #383838;
+          line-height: 36px;
+        }
+      }
+      .styleImageIntro2{
+        width: 290px;
+        text-align: center;
+        position: absolute;
+        top:40%;
+        left: 60%;
+        .styleImage2P{
+          font-size: 24px;
+          color: #212121;
+          line-height: 36px;
+        }
+        .styleImage2p1{
+          margin-top: 20px;
+          font-size: 18px;
+          color: #383838;
+          line-height: 36px;
+        }
+      }
+      .styleImageIntro3{
+        width: 374px;
+        text-align: center;
+        position: absolute;
+        top:75%;
+        left: 20%;
+        .styleImage3P{
+          font-size: 24px;
+          color: #212121;
+          line-height: 36px;
+        }
+        .styleImage3p1{
+          margin-top: 20px;
+          font-size: 18px;
+          color: #383838;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  .calendarPhone{
+    width: 1243px;
+    height: 722px;
+    margin: 0 auto;
+    position: relative;
+    .calendarPhoneLeft{
+      background: url("../image/calendar-phone.jpg") no-repeat;
+      width: 690px;
+      height: 722px;
+    }
+    .calendarPhoneRight{
+      width: 520px;
+      height: 722px;
+      position: absolute;
+      left: 690px;
+      top:0;
+      .calendarPhoneBox{
+        width: 422px;
+        margin:  160px auto 0;
+        padding-left: 90px;
+        .calendarPhoneTitle{
+          color: #2c2c2c;
+          font-size: 36px;
+          line-height: 36px;
+          text-align: center;
+        }
+        .calendarPhoneIntro{
+          margin-top: 30px;
+          text-align: center;
+          color: #383838;
+          font-size: 18px;
+          line-height: 36px;
+        }
+      }
+      .calendarPhoneQR{
+        width: 422px;
+        margin-top: 70px;
+        .calendarPhoneQRP{
+          display: inline-block;
+          width: 178px;
+          height: 178px;
+          img{
+            width: 178px;
+            height: 178px;
+          }
+          p{
+            font-size: 18px;
+            color: #212121;
+            text-align: center;
+            line-height: 36px;
+          }
+        }
+        .calendarPhoneQRW{
+          display: inline-block;
+          width: 178px;
+          height: 178px;
+          margin-left: 64px;
+          img{
+            width: 178px;
+            height: 178px;
+          }
+          p{
+            font-size: 18px;
+            color: #212121;
+            text-align: center;
+            line-height: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  .calendarFoot{
+    padding-top:70px;
+    background: #f2f2f2;
+    .calendarFootTitle{
+      line-height: 36px;
+      font-size: 36px;
+      color: #2c2c2c;
+      text-align: center;
+    }
+    .calendarFootTitle1{
+      line-height: 36px;
+      font-size: 18px;
+      color: #212121;
+      text-align: center;
+      margin: 35px 0;
+    }
+    .calendarFootImgBox{
+      width: 1045px;
+      margin: 35px auto 0;
+      ul{
+        &:after{
+          display: table;
+          clear: both;
+          content: '';
+        }
+      li{
+        width: 320px;
+        height: 260px;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 45px;
+      }
+      }
+    }
+    .calendarFooterBtn{
+      width: 180px;
+      height: 40px;
+      background: @baseColor;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+      color: #fff;
+      border-radius: 2px;
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      &:hover{
+        background: @baseColorHover;
+      }
+    }
+    .calendarFooterIntro{
+      color: #000;
+      font-size: 18px;
+      line-height: 24px;
+      padding: 30px 0 15px 0;
+      text-align: center;
+    }
+    .fourBox {
+      width: 100%;
+      background: #f2f2f2;
+      .sixContent{
+        width: 1000px;
+        margin: 0 auto;
+        li{
+          height: 100px;
+          line-height: 100px;
+          display: inline-block;
+          &:first-child{
+            background: url("../image/p1.png") no-repeat left center;
+            padding: 0 50px 0 50px;
+          }
+          &:nth-child(2){
+            background: url("../image/p2.png") no-repeat left center;
+            padding: 0 50px 0 50px;
+          }
+          &:nth-child(3){
+            background: url("../image/p3.png") no-repeat left center;
+            padding: 0 50px 0 50px;
+          }
+          &:last-child{
+            background: url("../image/p4.png") no-repeat left center;
+            padding: 0 0 0 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
+

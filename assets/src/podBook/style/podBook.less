@@ -1,0 +1,226 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseTitle:#0391e4;
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+body{
+  font-family: @baseFont;
+  background: #e3e3e3;
+  overflow-y: auto;
+}
+.podBookPage{
+  padding-bottom: 80px;
+  .podBookContent{
+    padding-top: 70px;
+    box-sizing: border-box;
+    .podBookContentBtnBox{
+      width: 208px;
+      height: 36px;
+      background-color: #f7f7f7;
+      border-radius: 30px;
+      border: 1px solid #c3c3c3;
+      margin: 0 auto;
+      ul{
+        &:after{
+          display: table;
+          clear: both;
+          content: '';
+        }
+        li{
+          float: left;
+          padding: 0;
+          height: 36px;
+          line-height: 36px;
+          text-align: center;
+          border-right: 1px solid #c3c3c3;
+          cursor: pointer;
+          list-style-type: none;
+          width: 103px;
+          font-size: 14px;
+          color: #1a1a1a;
+          &:last-child{
+            border: none;
+          }
+
+        }
+        .firstActive {
+          background: #e6e6e6;
+          height: 36px;
+          border-radius: 30px 0 0 30px;
+        }
+        .lastActive {
+          background: #e6e6e6;
+          height: 36px;
+
+          border-radius: 0 30px 30px 0;
+        }
+      }
+    }
+    .podBookContentBox{
+      height: 100%;
+      text-align: center;
+      .podBookContentPre{
+        position: relative;
+        display: inline-block;
+        margin-top: 30px;
+        .podBookContentBox0{
+          position: absolute;
+          top: -8px;
+          z-index: 100;
+          left: 10px;
+        }
+        .prev_left{
+          position: absolute;
+          background: url("../../calendarEditPage/image/editLeft.png") no-repeat;
+          width: 22px;
+          height: 44px;
+          top:50%;
+          margin-top: -52px;
+          left: -80px;
+          opacity: 0.8;
+          cursor: pointer;
+          &:hover{
+            opacity: 1;
+          }
+        }
+        .prev_right{
+          position: absolute;
+          background: url("../../calendarEditPage/image/editRight.png") no-repeat;
+          width: 22px;
+          height: 44px;
+          top:50%;
+          margin-top: -52px;
+          right: -80px;
+          opacity: 0.8;
+          cursor: pointer;
+          &:hover{
+            opacity: 1;
+          }
+        }
+        .podPrevew{
+          box-shadow: 0 0 2px 2px #bcbcbc;
+        }
+        .podPrevewFont{
+          line-height: 30px;
+          text-align: center;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+        .imgBoxVideoBg{
+          position: absolute;
+          top:50%;
+          left: 50%;
+          z-index: 50;
+          background: url("../../calendarEditPage/image/videoStart.png") center no-repeat;
+          width: 80px;
+          height: 80px;
+          margin: -40px 0 0 -40px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .podBookFoot{
+    position: fixed;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,.6);
+    &:after{
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .podBookFootBox{
+      width: 1000px;
+      margin: 0 auto;
+      .podBookFootBtn{
+        width: 220px;
+        height: 38px;
+        padding-right: 60px;
+        float: right;
+        margin-top: 12px;
+        .podBookFootBtnLeft{
+          border: none;
+          outline: none;
+          width:100px;
+          height: 38px;
+          display: inline-block;
+          text-align: center;
+          line-height: 38px;
+          background: @baseCloseColor;
+          border-radius: 2px;
+          color: #666;
+          cursor: pointer;
+          font-size: 16px;
+          text-decoration: none;
+          font-family: @baseFont;
+          &:hover{
+            background: @baseCloseHover;
+          }
+        }
+        .podBookFootBtnRight{
+          border: none;
+          outline: none;
+          width:100px;
+          height: 38px;
+          margin-left: 20px;
+          display: inline-block;
+          text-align: center;
+          line-height: 38px;
+          background: @baseColor;
+          color: #fff;
+          cursor: pointer;
+          font-size: 16px;
+          border-radius: 2px;
+          text-decoration: none;
+          font-family: @baseFont;
+          &:hover{
+            background: @baseColorHover;
+          }
+          &[disabled] {
+            background: @baseCloseColor;
+            opacity: 1;
+            color: #666;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  .podNewCreate{
+    width: 100%;
+    height: 100%;
+    color:#595959;
+    font-size: 18px;
+  }
+
+  .videoPrePage{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2200;
+    background: rgba(0,0,0,.6);
+    .videoPrePageBox{
+      width: 616px;
+      height: 348px;
+      margin: 200px auto 0;
+      position: relative;
+      .closePreVideo{
+        position: absolute;
+        top:0;
+        right: -16px;
+        background: url("../../common/images/alertMsg/close_video_c.png") no-repeat;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}

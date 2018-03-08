@@ -1,0 +1,94 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseTitle: #0391e4;
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+body {
+  font-family: @baseFont;
+  background: #e3e3e3;
+  overflow-y: auto;
+}
+
+/* 页面 */
+.calendarPreviewPage {
+  padding-bottom: 90px;
+  .calendarPreviewContent{
+    padding-top: 70px;
+    box-sizing: border-box;
+    .calendarPreviewBar {
+      width: 208px;
+      height: 36px;
+      background-color: #f7f7f7;
+      border-radius: 30px;
+      border: 1px solid #c3c3c3;
+      margin: 0 auto;
+      ul {
+        &:after {
+          display: table;
+          clear: both;
+          content: '';
+        }
+        li {
+          float: left;
+          padding: 0;
+          height: 36px;
+          line-height: 36px;
+          text-align: center;
+          border-right: 1px solid #c3c3c3;
+          cursor: pointer;
+          list-style-type: none;
+          width: 103px;
+          font-size: 14px;
+          color: #1a1a1a;
+          &:last-child {
+            border: none;
+          }
+
+        }
+        .frontSideButton {
+          background: #e6e6e6;
+          height: 36px;
+          border-radius: 30px 0 0 30px;
+        }
+        .backSideButton {
+          background: #e6e6e6;
+          height: 36px;
+
+          border-radius: 0 30px 30px 0;
+        }
+      }
+    }
+    .calendarPreviewMain{
+      padding-top: 12px;
+      width: 1000px;
+      margin: 0 auto;
+      position: relative;
+
+      /*左箭头*/
+      .calendarPreviewLeftArrow {
+        position: absolute;
+        top: 293px;
+        left: 164px;
+      }
+
+      /*右箭头*/
+      .calendarPreviewRightArrow {
+        position: absolute;
+        top: 293px;
+        right: 164px;
+      }
+      /*日历标题*/
+      .calendarPreviewTitle {
+        margin-top: 32px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1;
+        color: #3d3d3d;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,142 @@
+@baseFont:"Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseTitle:#555555;
+.memoryList{
+  width: 100%;
+  color:#595959;
+  font-size: 16px;
+  .memoryListBox{
+    padding-top: 20px;
+    margin-left: 20px;
+    max-height: 240px;
+    overflow-y: auto;
+    .memoryListLi{
+      margin-bottom: 20px;
+      height: 40px;
+      .memoryListTitle{
+        text-align: left;
+        display: inline-block;
+        font-size: 18px;
+        color:#000;
+      }
+      select {
+        /*很关键：将默认的select选择框样式清除*/
+        appearance:none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        /*在选择框的最右侧中间显示小箭头图片*/
+        background: url("../image/arrowDrop.png") no-repeat scroll 92% center transparent;
+        /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+        padding-right: 14px;
+      }
+      /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+      select::-ms-expand { display: none; }
+      .memoryListS{
+        width: 100px;
+        height: 40px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        cursor: not-allowed;
+        padding-left: 10px;
+        font-size: 18px;
+        color: @baseTitle;
+        font-family: @baseFont;
+        &[disabled] {
+          color: @baseTitle;
+        }
+      }
+      .memoryList_S{
+        width: 72px;
+        height: 40px;
+        margin-left: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        padding-left: 10px;
+        font-size: 18px;
+        color: @baseTitle;
+        font-family: @baseFont;
+      }
+      .memoryListIn{
+        width: 180px;
+        height: 36px;
+        margin-left: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 18px;
+        padding-left: 10px;
+        color: @baseTitle;
+        &::-webkit-input-placeholder{
+          color: #999;
+          font-family: @baseFont;
+        }
+        &::-moz-placeholder{
+          color: #ffffff !important;
+          font-family: @baseFont;
+        }
+        &:-moz-placeholder{
+          color: #ffffff !important;
+          font-family: @baseFont;
+        }
+        &:-ms-input-placeholder{
+          color: #ffffff !important;
+          font-family: @baseFont;
+        }
+      }
+      .memoryListDel{
+        width: 26px;
+        height: 26px;
+        opacity: 0.6;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 20px;
+        background: url('../image/delMemory.png') no-repeat;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .addMemory{
+    font-size: 18px;
+    color: @baseColor;
+    text-align: left;
+    margin: 20px 0 20px 115px;
+    cursor: pointer;
+    .addMemoryImg{
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      padding-right: 20px;
+    }
+    .memoryListTip{
+      font-size: 16px;
+      color:#999;
+      text-align: left;
+      padding-left: 115px;
+    }
+  }
+  .memoryListBtn{
+    color: #fff;
+    background: @baseColor;
+    width: 90px;
+    height: 32px ;
+    font-size: 16px;
+    margin: 20px 0 38px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 3px;
+    font-family: @baseFont;
+    &:hover{
+      background: @baseColorHover;
+    }
+  }
+}

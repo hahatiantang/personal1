@@ -1,0 +1,52 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+body{
+  font-family: @baseFont;
+}
+/*通用footer样式*/
+.tf-footer{
+  clear: both;
+  /*通用底栏，首页除外*/
+  .common-footer{
+    height: 120px;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-top: 10px;
+    .container{
+      width: 1000px;
+      margin: 20px auto 0;
+    }
+    &:after{
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .footer-left{
+      float: left;
+      height: 45px;
+      padding-top: 22px;
+      a{
+        font-size: 14px;
+        color: #444;
+        display: inline-block;
+        padding: 0 15px;
+        text-decoration: none;
+      }
+      .line-help{
+        color: #ccc;
+      }
+    }
+    .footer-right{
+      float: right;
+      text-align: right;
+      font-size: 14px;
+      color: #666;
+      a{
+        color: #666;
+        text-decoration: none;
+        display: inline-block;
+        padding-top: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,442 @@
+@baseFont: "Microsoft YaHei", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "SimHei", "宋体", "Emoji Symbols";
+@baseTitle:#0391e4;
+@baseColor: #039ae3;
+@baseColorHover: #0283c1;
+@baseCloseColor: #ffffff;
+@baseCloseHover: #f1f1f1;
+body{
+  font-family: @baseFont;
+  background: #e3e3e3;
+  overflow-y: auto;
+}
+.calendarEditPage{
+  padding-bottom: 80px;
+  .calendarContent{
+    padding-top: 40px;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    .calendarContentBox{
+      height: 100%;
+      text-align: center;
+      .calendarEditList{
+        position: relative;
+        display: inline-block;
+        margin-top: 30px;
+        ul{
+          clear:both;
+          li{
+            float: left;
+            position: relative;
+            margin-left: 8px;
+            cursor: pointer;
+            .calendarEditLiBg1{
+              border: 2px solid #e3e3e3;
+            }
+            .calendarEditLiBg{
+              border: 2px solid #94BD2B;
+              &:after {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                content: '';
+                width: 24px;
+                z-index: 100;
+                height: 24px;
+                background: url("../image/selectImgBg.png") left top no-repeat;
+              }
+            }
+            .calendarPic{
+              line-height: 30px;
+              text-align: center;
+              font-size: 12px;
+            }
+            &:first-child{
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+    .calendarContentBox1{
+      height: 100%;
+      text-align: center;
+      .calendarEdit{
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: 0 0 2px 2px #bcbcbc;
+        .calendarEditH{
+          position: absolute;
+          top: -8px;
+          z-index: 100;
+          left: 10px;
+        }
+      }
+    }
+    .setting_magic{
+      top:0;
+      .commonStyle();
+      height: 140px;
+    }
+    .setting_temp{
+      top:0;
+      .commonStyle();
+    }
+    .setting_style{
+      top:107px;
+      .commonStyle();
+    }
+    .bulk_upload{
+      top:214px;
+      .commonStyle();
+    }
+    .reverse_side{
+      top:321px;
+      .commonStyle();
+    }
+    .obverse_side{
+      top:0;
+      .commonStyle();
+    }
+    .add_memory{
+      width: 40px;
+      height:94px;
+      overflow: hidden;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 4px;
+      color: #fff;
+      border-radius: 3px;
+      padding: 7px 0 0 4px;
+      position: absolute;
+      top:330px;
+      right: -60px;
+      line-height: 20px;
+      cursor: pointer;
+      box-sizing: border-box;
+      background: rgba(255, 178, 0,0.9);
+      &:hover{
+        background: rgba(255, 178, 0,1);
+      }
+    }
+
+    .commonStyle{
+      width: 40px;
+      height:94px;
+      background: rgba(232,65,62,0.9);
+      position: absolute;
+      overflow: hidden;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 4px;
+      color: #fff;
+      border-radius: 3px;
+      padding: 7px 0 0 4px;
+      right: -60px;
+      line-height: 20px;
+      cursor: pointer;
+      box-sizing: border-box;
+      z-index: 5;
+      &:hover{
+        background: rgba(232,65,62,1);
+      }
+    }
+    .edit_left{
+      position: absolute;
+      background: url("../image/editLeft.png") no-repeat;
+      width: 22px;
+      height: 44px;
+      top:50%;
+      margin-top: -22px;
+      left: -140px;
+      opacity: 0.8;
+      cursor: pointer;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    .edit_right{
+      position: absolute;
+      background: url("../image/editRight.png") no-repeat;
+      width: 22px;
+      height: 44px;
+      top:50%;
+      margin-top: -22px;
+      right: -140px;
+      opacity: 0.8;
+      cursor: pointer;
+      &:hover{
+        opacity: 1;
+      }
+    }
+  }
+
+  .imgSetting{
+    .cover_btn{
+      display: none;
+      .btn_Box{
+        width: 203px;
+        //width: 90px;
+        height: 146px;
+        position: absolute;
+        right: 25px;
+        top: -43px;
+        z-index: 100;
+        .btnStyle{
+          &:before{
+            content: "";
+            position: absolute;
+            top: 32px;
+            right: 89px;
+            //right: 16px;
+            border-left: 12px solid transparent;
+            border-right: 11px solid transparent;
+            border-top: 11px solid #2d2d2e;
+          }
+          width: 203px;
+          //width: 90px;
+          height: 32px;
+          background-color: rgba(0,0,0,0.8);
+          border-radius: 4px;
+          .forImage{
+            width: 50px;
+            //width: 43px;
+            height: 18px;
+            color: #fff;
+            text-align: center;
+            border: none;
+            line-height: 20px;
+            cursor: pointer;
+            float: left;
+            margin-top: 7px;
+            font-size: 14px;
+            border-right: 1px solid #fff;
+            &:last-child{
+              border-right: none;
+            }
+          }
+        }
+      }
+      .btn_Box_magic{
+        width: 153px;
+        height: 146px;
+        position: absolute;
+        right: 25px;
+        top: -43px;
+        z-index: 100;
+        .btnStyleMagic{
+          &:before{
+            content: "";
+            position: absolute;
+            top: 32px;
+            right: 68px;
+            border-left: 12px solid transparent;
+            border-right: 11px solid transparent;
+            border-top: 11px solid #2d2d2e;
+          }
+          width: 153px;
+          height: 32px;
+          background-color: rgba(0,0,0,0.8);
+          border-radius: 4px;
+          .forImageMagic{
+            width: 50px;
+            height: 18px;
+            color: #fff;
+            text-align: center;
+            border: none;
+            line-height: 20px;
+            cursor: pointer;
+            float: left;
+            margin-top: 7px;
+            font-size: 14px;
+            border-right: 1px solid #fff;
+            &:last-child{
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
+
+    .imgBoxVideoBg{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      z-index: 50;
+      background: url("../image/videoStart.png") center no-repeat;
+      width: 80px;
+      height: 80px;
+      margin: -40px 0 0 -40px;
+      cursor: pointer;
+    }
+  }
+
+  .cursorStyle{
+    cursor: pointer;
+  }
+
+  .textStyle{
+    cursor: pointer;
+    border: 1px dashed #fff;
+    background-color: rgba(0,0,0,.1);
+  }
+
+  .calendarEditFoot{
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    z-index: 100;
+    background: #fff;
+    background: -webkit-linear-gradient(left,rgba(255,255,255,1) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,1)); /* Safari 5.1 - 6 */
+    background: -o-linear-gradient(right,rgba(255,255,255,1) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,1)); /* Opera 11.1 - 12*/
+    background: -moz-linear-gradient(right,rgba(255,255,255,1) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,1)); /* Firefox 3.6 - 15*/
+    background: linear-gradient(to right, rgba(255,255,255,1) 25%,rgba(255,255,255,0) 50%,rgba(255,255,255,1)); /* 标准的语法 */
+    &:after{
+      display: table;
+      clear: both;
+      content: '';
+    }
+    .calendarEditFootBox{
+      width: 1150px;
+      margin: 0 auto;
+      .calendarEditFootImg{
+        width: 29px;
+        height: 29px;
+        margin-top: 20px;
+        float: left;
+      }
+      .calendarEditFootIntro{
+        color:#666;
+        font-size: 16px;
+        line-height: 70px;
+        padding-left: 10px;
+        float: left;
+        .calendarEditFootNum{
+          color: #ff4949;
+        }
+      }
+      .calendarEditFootBtn{
+        width: 252px;
+        height: 38px;
+        float: right;
+        margin-top: 18px;
+        .calendarEditFootBtnLeft{
+          width:114px;
+          height: 36px;
+          display: inline-block;
+          text-align: center;
+          line-height: 36px;
+          background: #fff;
+          color: @baseColor;
+          letter-spacing: 4px;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid @baseColor;
+          &:hover{
+            background: @baseCloseHover;
+          }
+        }
+        .calendarEditFootBtnRight{
+          width:114px;
+          height: 36px;
+          margin-left: 20px;
+          display: inline-block;
+          text-align: center;
+          line-height: 36px;
+          letter-spacing: 4px;
+          background: @baseColor;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid @baseColor;
+          &:hover{
+            background: @baseColorHover;
+            border: 1px solid @baseColorHover;
+          }
+        }
+      }
+
+      .calendarEditFootBtnM{
+        height: 38px;
+        float: right;
+        margin-top: 18px;
+        .calendarUpVideoAgain{
+          width:120px;
+          height: 36px;
+          display: inline-block;
+          margin: 0 10px;
+          .calendarUpVideoAgainBtn{
+            .calendarEditFootBtnLeftM();
+            margin: 0;
+          }
+        }
+        .calendarEditFootBtnLeftM{
+          width:120px;
+          height: 36px;
+          margin: 0 10px;
+          display: inline-block;
+          text-align: center;
+          line-height: 36px;
+          background: #fff;
+          color: @baseColor;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid @baseColor;
+          &:hover{
+            background: @baseCloseHover;
+          }
+        }
+        .calendarEditFootBtnRightM{
+          width:114px;
+          height: 36px;
+          display: inline-block;
+          margin: 0 10px;
+          text-align: center;
+          line-height: 36px;
+          letter-spacing: 4px;
+          background: @baseColor;
+          color: #fff;
+          font-size: 16px;
+          cursor: pointer;
+          border-radius: 5px;
+          border: 1px solid @baseColor;
+          &:hover{
+            background: @baseColorHover;
+            border: 1px solid @baseColorHover;
+          }
+        }
+      }
+    }
+  }
+
+  .videoPage{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2200;
+    background: rgba(0,0,0,.6);
+    .videoPageBox{
+      width: 616px;
+      height: 348px;
+      margin: 200px auto 0;
+      position: relative;
+      .closeVideo{
+        position: absolute;
+        top:0;
+        right: -16px;
+        background: url("../../common/images/alertMsg/close_video_c.png") no-repeat;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+    }
+  }
+}
